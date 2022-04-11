@@ -3,13 +3,81 @@ body{
   color: white;
 }
 
-.wrapper{
+/* .wrapper{
   height: 100vh;
+} */
+
+.gb-container{
+  width: 60%;
+  margin: 0 auto;
 }
 
-.sc-box{
+.gb-box{
   background-color: rgb(182, 52, 52);
   height: 50%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  min-height: 300px;
+}
+
+h2{
+  font-weight: 900;
+}
+
+p{
+  font-size: 2rem;
+}
+
+.arrow{
+  opacity: 0;
+  font-size: 4rem;
+  transition: .5s;
+  text-shadow: 0 0 10px #601b1c;
+  animation-name: arrow;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow{
+  0%{transform: scale(1)}
+  50%{
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #601b1c;
+  }
+}
+
+.gb-btn{
+  display: none;
+  box-shadow: 0 5px 10px #601b1c;
+  font-size: 1.3rem;
+}
+.n-random{
+  opacity: 0;
+  transition: .3s;
+}
+
+.opacity{
+  opacity: 1;
+}
+
+.active{
+  display: inline-block;
+  text-align: center;
+}
+
+.pc, .user{
+  width: 80px;
+  height: 80px;
+  font-size: 3rem;
+  color: white;
+  background-color: #FFCD38;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #601b1c;
+  text-shadow: 0 0 10px #9f8022;
+}
+
+.win-lose{
+  transition: .3s;
+  font-size: 3rem;
 }
