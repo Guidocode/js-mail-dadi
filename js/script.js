@@ -30,13 +30,24 @@ const mail = prompt('Inserisci la tua mail');
 let output = document.querySelector('#message-output');
 
 // controllo che sia nella lista di chi può accedere
+
+// di dafault stabilisco che il mio nome non sia presnte
 let mailPresente = false;
 
+// cerco la mail digitata dentro l'array classe 61
 for(let i = 0; i < classe61.length; i++){
+  // se la mail digitata è uguale a un elemento dell'array
   if(mail === classe61[i]){
+    // memorizzo che è presente
     mailPresente = true;
-    output.innerHTML = 'Sei presente nella lista!'
-  }else{
-    output.innerHTML = 'Non sei presente nella lista!'
   }
 };
+
+// Stampo il messaggio in base al risultato
+if(mailPresente){
+  output.innerHTML = 'Sei presente nella lista! Gioca hai dadi!'
+  console.log('trovato');
+} else {
+  output.innerHTML = 'Non sei presente nella lista!'
+  console.log('non trovato');  
+}
