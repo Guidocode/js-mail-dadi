@@ -27,8 +27,8 @@ const classe61 = [
 
 
 // Chiedo all'utente la sua mail 
-const mail = prompt('Inserisci la tua mail');
-// const mail = 'guidobuono@icloud.com';
+// const mail = prompt('Inserisci la tua mail');
+const mail = 'guidobuono@icloud.com';
 
 const btnTira = document.querySelector('.gb-btn');
 
@@ -65,25 +65,27 @@ if(mailPresente){
 
 
 // DADI 
-let nPc = document.querySelector('.pc');
-let nUser = document.querySelector('.user');
-let nRandom = document.querySelector('.n-random');
-let winLose = document.querySelector('.win-lose');
+const nPc = document.querySelector('.pc');
+const nUser = document.querySelector('.user');
+const nRandom = document.querySelector('.n-random');
+const winLose = document.querySelector('.win-lose');
 
 
 btnTira.addEventListener('click', function(){
   nRandom.classList.add('opacity');
-  nPc.innerHTML = Math.ceil(Math.random()*6);
-  nUser.innerHTML = Math.ceil(Math.random()*6);
+  const resultPc = Math.ceil(Math.random()*6);
+  const resultUser = Math.ceil(Math.random()*6);
 
+  nPc.innerHTML = resultPc;
+  nUser.innerHTML = resultUser;
 
   console.log(nPc);
   console.log(nUser);
   
   // NON FUNZIONA 
-  if(nPc > nUser){
+  if(resultPc > resultUser){
     winLose.innerHTML = 'Hai perso...'
-  }else if(nPc < nUser){
+  }else if(resultPc < resultUser){
     winLose.innerHTML = 'Hai vinto!'
   }else{
     winLose.innerHTML = 'Pareggio!'
