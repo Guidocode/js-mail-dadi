@@ -27,8 +27,8 @@ const classe61 = [
 
 
 // Chiedo all'utente la sua mail 
-// const mail = prompt('Inserisci la tua mail');
-const mail = 'guidobuono@icloud.com';
+const mail = prompt('Inserisci la tua mail');
+// const mail = 'guidobuono@icloud.com';
 
 const btnTira = document.querySelector('.gb-btn');
 
